@@ -3,6 +3,7 @@ import mysql from "mysql2";
 import bodyParser from "body-parser";
 
 const router = express.Router();
+router.use(bodyParser.json());
 
 router.get("/", (req, res) => {
     // make database connection
@@ -14,9 +15,12 @@ router.get("/", (req, res) => {
         database: "ecoshelterdb",
 
     });
+    // make the query
     eco.query("SELECT * FROM protected_animal", function (err, result, fields) {
+
         if (err) throw err;
         console.log(result);
+
       });
     return res.send("Hello from admin");
 });
