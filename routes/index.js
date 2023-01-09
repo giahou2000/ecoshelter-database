@@ -14,24 +14,24 @@ import donRoute from'./donator.js';
 const router = express.Router();
 
 // vet actions routes
-router.use("/ecoshelterdb/vet", vetRoute);
+router.use("/vet", vetRoute);
 
 // visitor actions routes
-router.use("/ecoshelterdb/visitor", visRoute);
+router.use("/visitor", visRoute);
 
 // employee actions routes
-router.use("/ecoshelterdb/employee", empRoute);
+router.use("/employee", empRoute);
 
 // volunteer actions routes
-router.use("/ecoshelterdb/volunteer", volRoute);
+router.use("/volunteer", volRoute);
 
 // adopter actions routes
-router.use("/ecoshelterdb/adopter", adoptRoute);
+router.use("/adopter", adoptRoute);
 
 // donator actions routes
-router.use("/ecoshelterdb/donator", donRoute);
+router.use("/donator", donRoute);
 
 // admin actions routes
-router.use("/ecoshelterdb/admin", adminRoute);
+router.use("/admin", adminRoute);
 
 export default router;

@@ -33,8 +33,8 @@ eco.connect((err) => {
  **/ 
 
 // general
-app.get("/ecoshelterdb", (req, res, next) => {
-    return res.send("Hi random person. This is an ecoshelter database. Have a nice day!!!");
+app.get("/ecoshelter", (req, res, next) => {
+    return res.json({ message: "Hello from ecoshelter!" });
 });
 
 // just for server testing
